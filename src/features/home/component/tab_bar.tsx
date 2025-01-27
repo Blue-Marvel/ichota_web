@@ -1,5 +1,6 @@
 import { useState } from "react";
 import JobDescription from "./about_job";
+import ApplicationForm from "./application";
 
 const TabBar = () => {
   const [activeTab, setActiveTab] = useState("Overview");
@@ -26,8 +27,10 @@ const TabBar = () => {
           </button>
         ))}
       </div>
-      {activeTab === "Overview" && (
+      {activeTab === "Overview" ? (
         <JobDescription onClick={() => setActiveTab("Application")} />
+      ) : (
+        <ApplicationForm />
       )}
     </div>
   );
