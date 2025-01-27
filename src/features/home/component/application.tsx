@@ -79,7 +79,7 @@ const ApplicationForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 px-16 pt-10">
+    <form onSubmit={handleSubmit} className="space-y-6 px-16 pt-10  ">
       <div className=" flex flex-row w-[100%] justify-between ">
         <div className="w-1/2 pr-8">
           <label className="block text-sm font-medium text-[#333333]">
