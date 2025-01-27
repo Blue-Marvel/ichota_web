@@ -26,7 +26,9 @@ const TabBar = () => {
           </button>
         ))}
       </div>
-      {activeTab === "Overview" && <JobDescription />}
+      {activeTab === "Overview" && (
+        <JobDescription onClick={() => setActiveTab("Application")} />
+      )}
     </div>
   );
 };

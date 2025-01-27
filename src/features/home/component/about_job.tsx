@@ -1,4 +1,10 @@
-const JobDescription = () => {
+import React from "react";
+
+interface JobDescriptionProps {
+  onClick: () => void;
+}
+
+const JobDescription: React.FC<JobDescriptionProps> = ({ onClick }) => {
   return (
     <div className="max-w-4xl mx-auto p-8">
       <section className="mb-8">
@@ -96,7 +102,10 @@ const JobDescription = () => {
       </section>
 
       <div className="flex justify-center">
-        <button className="bg-[#1167B1] text-white py-2 px-6 rounded-4xl hover:bg-blue-700 focus:outline-none">
+        <button
+          onClick={onClick}
+          className="bg-[#1167B1] text-white py-2 px-6 rounded-4xl hover:bg-blue-700 focus:outline-none"
+        >
           Apply
         </button>
       </div>
